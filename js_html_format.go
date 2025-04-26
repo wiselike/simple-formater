@@ -54,7 +54,7 @@ func jsHtmlFormat(inPath string) []byte {
 		newTabs := prevModifiedTabs
 
 		// 若行前导全为 Tab，则保留原始 Tab 数
-		if countSpaces == 0 && countTabs > 0 {
+		if countSpaces == 0 && countTabs >= 0 {
 			newTabs = countTabs
 		} else {
 			// 比较当前有效缩进与上一行有效缩进
